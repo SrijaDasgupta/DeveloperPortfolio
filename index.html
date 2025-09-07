@@ -12,6 +12,15 @@
     <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Minimal, non-destructive formatting helpers -->
+    <style>
+        ul.custom-list { list-style: none; padding-left: 0; margin: 0; }
+        ul.custom-list li { margin: 6px 0; position: relative; padding-left: 22px; }
+        ul.custom-list li::before { content: "•"; position: absolute; left: 0; line-height: 1; }
+        /* Preserve line breaks inside any remaining <p> if you add manual \n later */
+        p { white-space: normal; }
+    </style>
 </head>
 
 <body>
@@ -33,13 +42,13 @@
             <li>
                 <a href="#education">Education</a>
             </li>
-	   <li>
+	       <li>
                 <a href="#courseworks">Courseworks</a>
             </li>
-		<li>
+		    <li>
                 <a href="#certifications">Certifications</a>
             </li>
-	    <li>
+	        <li>
                 <a href="#publications">Publications</a>
             </li>
             <li>
@@ -82,11 +91,13 @@
                     <h2 class="heading">About Me</h2>
                 </div>
                 <div class="col-md-8">
-                    <p>
-			   Results-driven Business Analyst with 5+ years of experience bridging business needs and technical solutions across large-scale environments. Proven ability to deliver data-driven insights, process
-optimization, and stakeholder alignment that drive measurable business impact. Skilled in requirements gathering, KPI tracking using JIRA, Workday,Miro, and data visualization with expertise in SQL, Tableau.
-Adept at collaborating with product, engineering, and leadership teams to influence decisions and support strategic growth.
-                    </p>
+                    <!-- was a single <p>; now bulletized with the same sentences -->
+                    <ul class="custom-list">
+                        <li>Results-driven Business Analyst with 5+ years of experience bridging business needs and technical solutions across large-scale environments.</li>
+                        <li>Proven ability to deliver data-driven insights, process optimization, and stakeholder alignment that drive measurable business impact.</li>
+                        <li>Skilled in requirements gathering, KPI tracking using JIRA, Workday, Miro, and data visualization with expertise in SQL, Tableau.</li>
+                        <li>Adept at collaborating with product, engineering, and leadership teams to influence decisions and support strategic growth.</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -99,58 +110,56 @@ Adept at collaborating with product, engineering, and leadership teams to influe
             <div data-date="2020 – 2021">
                 <h3>Canadian Global information LTD</h3>
                 <h4>Associate Software Engineer</h4>
-                <p>
-                 Worked on building and testing of opensource software, interacting with and contributing to the opensource communities.
-                 Worked on DevOps and Cloud technologies such as Docker, Kubernetes (OpenShift) and Jenkins.   
-		 Worked on microservices such as SpringBoot.
-		 For code optimization used SonarQube.
-                </p>
+                <!-- split each sentence into its own bullet -->
+                <ul class="custom-list">
+                    <li>Worked on building and testing of opensource software, interacting with and contributing to the opensource communities.</li>
+                    <li>Worked on DevOps and Cloud technologies such as Docker, Kubernetes (OpenShift) and Jenkins.</li>
+		            <li>Worked on microservices such as SpringBoot.</li>
+		            <li>For code optimization used SonarQube.</li>
+                </ul>
             </div>
 
             <div data-date="August 2021 – May,2023">
                 <h3>University Of Central Florida</h3>
                 <h4>Graduate Teaching Assistant</h4>
-                <p>
-                    Managing a class of 100+ students and conducting office hours for problem solving sessions.
-                    Graded assignments and helped professor to set up question paper for Design and Analysis of Algorithms,Computer Architechture,Network Optimization etc.
-                </p>
+                <ul class="custom-list">
+                    <li>Managing a class of 100+ students and conducting office hours for problem solving sessions.</li>
+                    <li>Graded assignments and helped professor to set up question paper for Design and Analysis of Algorithms, Computer Architechture, Network Optimization etc.</li>
+                </ul>
             </div>
 		
-	<div data-date="February,2023-August,2023">
+	        <div data-date="February,2023-August,2023">
                 <h3>Tenex Software Solutions</h3>
                 <h4>Business Analyst</h4>
-                <p>
-                    Elicited and documented detailed requirements (functional, nonfunctional, compliance) from election committee stakeholders in Confluence, ensuring alignment with legal standards (e.g., ballot
-authentication, voter eligibility, audit trails).
-Translated needs into structured user stories in Jira, prioritizing secure login flows, audit logging, and real-time dashboards to support election transparency.
-Conducted process analysis (AS-IS/TO-BE) with swimlane diagrams, identifying bottlenecks in voter registration and tallying.
-Implemented Salesforce dashboards for tracking committee communications and stakeholder engagement, reducing email-based manual tracking by 40%.
-Managed sprint planning, backlog grooming, and release scheduling in Jira to align development cycles with election timelines, reducing delays by 25%.
-Oversaw UAT documentation and test case tracking in Jira, closing traced test issues and compliance gaps ahead of go-live.
-                </p>
+                <ul class="custom-list">
+                    <li>Elicited and documented detailed requirements (functional, nonfunctional, compliance) from election committee stakeholders in Confluence, ensuring alignment with legal standards (e.g., ballot authentication, voter eligibility, audit trails).</li>
+                    <li>Translated needs into structured user stories in Jira, prioritizing secure login flows, audit logging, and real-time dashboards to support election transparency.</li>
+                    <li>Conducted process analysis (AS-IS/TO-BE) with swimlane diagrams, identifying bottlenecks in voter registration and tallying.</li>
+                    <li>Implemented Salesforce dashboards for tracking committee communications and stakeholder engagement, reducing email-based manual tracking by 40%.</li>
+                    <li>Managed sprint planning, backlog grooming, and release scheduling in Jira to align development cycles with election timelines, reducing delays by 25%.</li>
+                    <li>Oversaw UAT documentation and test case tracking in Jira, closing traced test issues and compliance gaps ahead of go-live.</li>
+                </ul>
             </div>
-	<div data-date="August,2023-December,2023">
+	        <div data-date="August,2023-December,2023">
                 <h3>Sunixa Software Solutions</h3>
                 <h4>Business Analyst</h4>
-                <p>
-                    • Led the “SmartAssist Bot” project, integrating AI chatbot with Confluence to deliver FAQs and process docs, cutting internal queries by 45%.
-• Developed SQL-driven Tableau dashboards to track KPIs including resolution times,
-adoption rates, and usage trends.
-• Collaborated with cross-functional teams to gather requirements, design workflows,
-and document business processes for system enhancements.
-• Facilitated UAT sessions with stakeholders, captured feedback, and ensured alignment with business goals.
-                </p>
+                <ul class="custom-list">
+                    <li>• Led the “SmartAssist Bot” project, integrating AI chatbot with Confluence to deliver FAQs and process docs, cutting internal queries by 45%.</li>
+                    <li>• Developed SQL-driven Tableau dashboards to track KPIs including resolution times, adoption rates, and usage trends.</li>
+                    <li>• Collaborated with cross-functional teams to gather requirements, design workflows, and document business processes for system enhancements.</li>
+                    <li>• Facilitated UAT sessions with stakeholders, captured feedback, and ensured alignment with business goals.</li>
+                </ul>
             </div>	
 
-	<div data-date="January,2024-Present">
+	        <div data-date="January,2024-Present">
                 <h3>Newbern Excel</h3>
                 <h4>Business Analyst</h4>
-                <p>
-		      - Defined KPIs & translated requirements, improving reporting efficiency by 30%.
-- Built Power BI dashboards/SQL pipelines for VP-level decisions.
-- Facilitated sprint planning/backlog refinement with stakeholders.
-- Supported cloud deployments with scalable workflows.
-                </p>
+                <ul class="custom-list">
+		            <li>- Defined KPIs & translated requirements, improving reporting efficiency by 30%.</li>
+                    <li>- Built Power BI dashboards/SQL pipelines for VP-level decisions.</li>
+                    <li>- Facilitated sprint planning/backlog refinement with stakeholders.</li>
+                    <li>- Supported cloud deployments with scalable workflows.</li>
+                </ul>
             </div>
 		
         </div>
@@ -163,10 +172,10 @@ and document business processes for system enhancements.
             <h3>West Bengal University of Technology(India)</h3>
             <span class="education-date">August 2016 - July 2020</span>
             <h4>Bachelor of Technology in Computer Science and Engineering</h4>
-            <p>
-                Original GPA:8.3/10.00
-		Converted GPA: 3.60/4.00    
-            </p>
+            <ul class="custom-list">
+                <li>Original GPA:8.3/10.00</li>
+		        <li>Converted GPA: 3.60/4.00</li>    
+            </ul>
         </div>
         <!-- End .education-block -->
 
@@ -174,69 +183,78 @@ and document business processes for system enhancements.
             <h3>University of Central Florida</h3>
             <span class="education-date">August 2021 - May,2023</span>
             <h4>Masters of Science in Computer Science</h4>
-            <p>
-                 GPA:3.75/4.00
-		  
-            </p>
+            <ul class="custom-list">
+                <li>GPA:3.75/4.00</li>
+            </ul>
         </div>
         <!-- End .education-block -->
 	    
     </div>
     <!-- End #education -->
 
-	   <div id="courseworks">
-              <div class="container">
-                 <div class="row">
-                     <div class="col-md-4">
-                         <h2 class="heading">Courseworks</h2>
-                    </div>
-                    <div class="col-md-8">
-                          <p>
-				 Machine learning, Design and analysis of algorithm, Computer Architecture, Incident response, Malware and software vulnerability analysis, DBMS, Computer Forensics, Android App Development, Computer networks, 
-Operation Research, Computer Vision.
-                    </p>
+	<div id="courseworks">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2 class="heading">Courseworks</h2>
+                </div>
+                <div class="col-md-8">
+                    <!-- split comma list into bullets -->
+                    <ul class="custom-list">
+                        <li>Machine learning</li>
+                        <li>Business Analytics</li>
+						 <li>Data Analysis</li>
+                        <li>Project Management</li>
+                        <li>Incident response</li>
+                        <li>Malware and software vulnerability analysis</li>
+                        <li>DBMS</li>
+                        <li>Computer networks</li>
+                        <li>Operation Research</li>
+                        <li>Computer Vision</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
     <!-- End #courseworks -->
 
-	   <div id="publications">
-              <div class="container">
-                 <div class="row">
-                     <div class="col-md-4">
-                         <h2 class="heading">Publications</h2>
+	<div id="publications">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2 class="heading">Publications</h2>
 			  
-                    </div>
-                    <div class="col-md-8">
-                          <p>
-			      Bluetooth Controlled Arduino Based Robotic Arm | Asian Journal of Convergence in Technology(AJCT) | Apr 5, 2021:This paper investigates the development and application of robotic arm technology to meet modern industrial and medical
-needs. The research presents a 4-axis robotic arm, controlled via an Android application connected to an Arduino UNO
-microcontroller with a Bluetooth module. Link: https://www.asianssr.org/index.php/ajct/article/view/1045
-                    </p>
+                </div>
+                <div class="col-md-8">
+                    <ul class="custom-list">
+                        <li>Bluetooth Controlled Arduino Based Robotic Arm | Asian Journal of Convergence in Technology(AJCT) | Apr 5, 2021: This paper investigates the development and application of robotic arm technology to meet modern industrial and medical needs.</li>
+                        <li>The research presents a 4-axis robotic arm, controlled via an Android application connected to an Arduino UNO microcontroller with a Bluetooth module.</li>
+                        <li>Link: <a href="https://www.asianssr.org/index.php/ajct/article/view/1045" target="_blank">https://www.asianssr.org/index.php/ajct/article/view/1045</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
     <!-- End #publication -->
 
-		   <div id="certifications">
-              <div class="container">
-                 <div class="row">
-                     <div class="col-md-4">
-                         <h2 class="heading">Certifications</h2>
+	<div id="certifications">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h2 class="heading">Certifications</h2>
 			  
-                    </div>
-                    <div class="col-md-8">
-                          <p>
-			Scrum Alliance-Scrum Master
-            Google- Agile Project Management
-            Coursera- Lean Six Sigma
-            Linkedin- SQL
-			SAP Signavio- Business Process Analysis 
-            Atlassian University- JIRA
-			IBM- Generative AI
-                    </p>
+                </div>
+                <div class="col-md-8">
+                    <!-- one bullet per cert line -->
+                    <ul class="custom-list">
+			            <li>Scrum Alliance-Scrum Master</li>
+                        <li>Google- Agile Project Management</li>
+                        <li>Coursera- Lean Six Sigma</li>
+                        <li>Linkedin- SQL</li>
+			            <li>SAP Signavio- Business Process Analysis</li>
+                        <li>Atlassian University- JIRA</li>
+			            <li>IBM- Generative AI</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -256,35 +274,32 @@ microcontroller with a Bluetooth module. Link: https://www.asianssr.org/index.ph
                     <!-- End .project-image -->
                     <div class="project-info">
                         <h3>Spotify Music Recommendation System:</h3>
-                        <p>
-                           Technologies Used: PyCharm, Google Colaboratory, GitHub
-Description: Analyzed Spotify's music recommendation system using Spotify and Genius APIs for diFerent tracks and albums.
-Implemented data analysis techniques to evaluate recommendation eFiciency.
-https://github.com/SrijaDasgupta/Spotify_Music_Recommendation
-
-                        </p>
-                        
+                        <!-- original <p> converted to bullets -->
+                        <ul class="custom-list">
+                            <li>Technologies Used: PyCharm, Google Colaboratory, GitHub</li>
+                            <li>Description: Analyzed Spotify's music recommendation system using Spotify and Genius APIs for diFerent tracks and albums.</li>
+                            <li>Implemented data analysis techniques to evaluate recommendation eFiciency.</li>
+                            <li><a href="https://github.com/SrijaDasgupta/Spotify_Music_Recommendation" target="_blank">https://github.com/SrijaDasgupta/Spotify_Music_Recommendation</a></li>
+                        </ul>
                     </div>
                     <!-- End .project-info -->
                 </div>
                 <!-- End .project -->
 
-				  <div class="project shadow-large">
+				<div class="project shadow-large">
                     <div class="project-image">
                         <img src="images/project.jpg" />
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
                         <h3>Agile Process Optimization with AI-Powered Insight</h3>
-                        <p>
-                            
-Objective: Enhance sprint predictability and identify risk factors in product delivery.
-Analyzed historical velocity and throughput data to uncover inefficiencies.
-Applied predictive models to highlight risks causing sprint delays.
-Introduced burndown and Kanban visualizations to improve transparency for stakeholders.
-Tools Used: Python, Jupyter Notebook, Jira, Confluence, Power BI
-                        </p>
-                        
+                        <ul class="custom-list">
+                            <li>Objective: Enhance sprint predictability and identify risk factors in product delivery.</li>
+                            <li>Analyzed historical velocity and throughput data to uncover inefficiencies.</li>
+                            <li>Applied predictive models to highlight risks causing sprint delays.</li>
+                            <li>Introduced burndown and Kanban visualizations to improve transparency for stakeholders.</li>
+                            <li>Tools Used: Python, Jupyter Notebook, Jira, Confluence, Power BI</li>
+                        </ul>
                     </div>
                     <!-- End .project-info -->
                 </div>
@@ -297,14 +312,13 @@ Tools Used: Python, Jupyter Notebook, Jira, Confluence, Power BI
                     <!-- End .project-image -->
                     <div class="project-info">
                         <h3>Customer Journey Analysis & Automation</h3>
-                        <p>
-         Objective: Reduce onboarding friction and improve customer satisfaction.
-Conducted workshops to map the customer journey and identify drop-off points.
-Defined measurable KPIs such as onboarding time, CSAT, and retention.
-Collaborated with engineering to automate onboarding steps, including an AI chatbot for FAQs.
-Tools Used: SQL, Python, Power BI, Excel, Jira, Chatbot Frameworks
-                        </p>
-                        
+                        <ul class="custom-list">
+                            <li>Objective: Reduce onboarding friction and improve customer satisfaction.</li>
+                            <li>Conducted workshops to map the customer journey and identify drop-off points.</li>
+                            <li>Defined measurable KPIs such as onboarding time, CSAT, and retention.</li>
+                            <li>Collaborated with engineering to automate onboarding steps, including an AI chatbot for FAQs.</li>
+                            <li>Tools Used: SQL, Python, Power BI, Excel, Jira, Chatbot Frameworks</li>
+                        </ul>
                     </div>
                     <!-- End .project-info -->
                 </div>
@@ -317,14 +331,13 @@ Tools Used: SQL, Python, Power BI, Excel, Jira, Chatbot Frameworks
                     <!-- End .project-image -->
                     <div class="project-info">
                         <h3>KPI-Driven Sales Dashboard & Process Improvement</h3>
-                        <p>
-Objective: Improve sales pipeline visibility and track KPIs to support data-driven decisions.
-Gathered requirements from stakeholders and defined KPIs (conversion rate, churn, lead time).
-Designed and developed interactive dashboards for leadership to monitor performance.
-Automated reporting workflows, reducing manual effort and ensuring real-time insights.
-Tools Used: Power BI, SQL, Excel, Jira, Tableau, Data Visualization.
-                        </p>
-                        
+                        <ul class="custom-list">
+                            <li>Objective: Improve sales pipeline visibility and track KPIs to support data-driven decisions.</li>
+                            <li>Gathered requirements from stakeholders and defined KPIs (conversion rate, churn, lead time).</li>
+                            <li>Designed and developed interactive dashboards for leadership to monitor performance.</li>
+                            <li>Automated reporting workflows, reducing manual effort and ensuring real-time insights.</li>
+                            <li>Tools Used: Power BI, SQL, Excel, Jira, Tableau, Data Visualization.</li>
+                        </ul>
                     </div>
                     <!-- End .project-info -->
                 </div>
@@ -338,69 +351,64 @@ Tools Used: Power BI, SQL, Excel, Jira, Tableau, Data Visualization.
                     <!-- End .project-image -->
                     <div class="project-info">
                         <h3>ChatBot</h3>
-                        <p>
-                            Technologies Used: JavaScript, HTML, CSS
-Description: Developed a chatbot capable of replying to predefined messages with the ability to add more responses for dynamic interactions.
-Designed for interactive and engaging user conversation.
-https://srijadasgupta.github.io/ChatBot/
-                        </p>
-                        
+                        <ul class="custom-list">
+                            <li>Technologies Used: JavaScript, HTML, CSS</li>
+                            <li>Description: Developed a chatbot capable of replying to predefined messages with the ability to add more responses for dynamic interactions.</li>
+                            <li>Designed for interactive and engaging user conversation.</li>
+                            <li><a href="https://srijadasgupta.github.io/ChatBot/" target="_blank">https://srijadasgupta.github.io/ChatBot/</a></li>
+                        </ul>
                     </div>
                     <!-- End .project-info -->
                 </div>
                 <!-- End .project -->
-	    <div class="project shadow-large">
+	            <div class="project shadow-large">
                     <div class="project-image">
                         <img src="images/project.jpg" />
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
                         <h3>Restaurant App</h3>
-                        <p>
-                            Technologies Used: Swift, XCode
-Description: Developed a restaurant app allowing customers to view menus, place orders, and track wait times.
-Ensured a seamless user experience through an intuitive design.
-https://github.com/SrijaDasgupta/Restaurant
-                        </p>
-                        
+                        <ul class="custom-list">
+                            <li>Technologies Used: Swift, XCode</li>
+                            <li>Description: Developed a restaurant app allowing customers to view menus, place orders, and track wait times.</li>
+                            <li>Ensured a seamless user experience through an intuitive design.</li>
+                            <li><a href="https://github.com/SrijaDasgupta/Restaurant" target="_blank">https://github.com/SrijaDasgupta/Restaurant</a></li>
+                        </ul>
                     </div>
                     <!-- End .project-info -->
                 </div>
                 <!-- End .project -->
-		  <div class="project shadow-large">
+		        <div class="project shadow-large">
                     <div class="project-image">
                         <img src="images/project.jpg" />
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
                         <h3>Cancer Prediction Model</h3>
-                        <p>
-                           Technologies Used: Jupyter, Python 3.0, PyCharm, Deep Learning (RNN, CNN, DNN)
-Description: Collaborated with a team to develop an algorithm for predicting breast cancer symptoms using deep learning techniques.
-Evaluated multiple ML models to improve prediction accuracy.
-https://github.com/SrijaDasgupta/Breast-Cancer-Prediction-With-Multiple-Machine-Learning-Methods
-                        </p>
-                       
+                        <ul class="custom-list">
+                           <li>Technologies Used: Jupyter, Python 3.0, PyCharm, Deep Learning (RNN, CNN, DNN)</li>
+                           <li>Description: Collaborated with a team to develop an algorithm for predicting breast cancer symptoms using deep learning techniques.</li>
+                           <li>Evaluated multiple ML models to improve prediction accuracy.</li>
+                           <li><a href="https://github.com/SrijaDasgupta/Breast-Cancer-Prediction-With-Multiple-Machine-Learning-Methods" target="_blank">https://github.com/SrijaDasgupta/Breast-Cancer-Prediction-With-Multiple-Machine-Learning-Methods</a></li>
+                        </ul>
                     </div>
                     <!-- End .project-info -->
                 </div>
                 <!-- End .project -->
 	  
-	 <div class="project shadow-large">
+	            <div class="project shadow-large">
                     <div class="project-image">
                         <img src="images/project.jpg" />
                     </div>
                     <!-- End .project-image -->
                     <div class="project-info">
                         <h3>Employee Management App</h3>
-                        <p>
-				Technologies used: Java, JavaScript, XML, JSON, MongoDB, MySQL, Spring Boot
-Description: This project is based on a user app for tracking records of employees. The user/employee can register their details, update/ delete it.
-They can keep a track of their payroll, leave applications, salary and other personal details. In the app there are admin and manager access as
-well, managers can view own record also record for any other employees , admin can manage every record (update/delete).
-Project link: https://github.com/SrijaDasgupta/Employee-Management
-                        </p>
-                       
+                        <ul class="custom-list">
+			            	<li>Technologies used: Java, JavaScript, XML, JSON, MongoDB, MySQL, Spring Boot</li>
+                            <li>Description: This project is based on a user app for tracking records of employees. The user/employee can register their details, update/ delete it.</li>
+                            <li>They can keep a track of their payroll, leave applications, salary and other personal details. In the app there are admin and manager access as well, managers can view own record also record for any other employees , admin can manage every record (update/delete).</li>
+                            <li>Project link: <a href="https://github.com/SrijaDasgupta/Employee-Management" target="_blank">https://github.com/SrijaDasgupta/Employee-Management</a></li>
+                        </ul>
                     </div>
                     <!-- End .project-info -->
                 </div>
@@ -414,7 +422,7 @@ Project link: https://github.com/SrijaDasgupta/Employee-Management
 
     <div id="skills">
         <h2 class="heading">Skills</h2>
-        <ul>
+        <ul class="custom-list">
             <li>Python</li>
             <li>Power BI</li>
             <li>SQL</li>
@@ -457,19 +465,13 @@ Project link: https://github.com/SrijaDasgupta/Employee-Management
                         </li>
                         
                         <li>
-                            <a href="https://www.linkedin.com/in/srijadasgupta/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                            <a href="https://www.linkedin.com/in/sdg24/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                         </li>
                         
                         
-                        <li>
-                            <a href="https://www.youtube.com/channel/UCCAjGpA8UXTar1kUbQ5NCeQ" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>
-                        </li>
-			
-			<li>
-                            <a href = "mailto:srija.dg2410@gmail.com" target="_blank"><i class="fa fa-google" aria-hidden="true"></i></a>
-                        </li>
-			<li>
-                            <a href="https://thesrija.wordpress.com" target="_blank"><i class="fa fa-wordpress" aria-hidden="true"></i></a>
+                       			
+			            <li>
+                            <a href = "mailto:dasgupta.srija97@gmail.com" target="_blank"><i class="fa fa-google" aria-hidden="true"></i></a>
                         </li>
                     </ul>
                 </div>
